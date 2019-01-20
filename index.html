@@ -28,12 +28,25 @@
     a:hover, a:active {
       background-color: red;
     }
+	  
+#loading {
+  position: fixed;
+  height:100vh;
+  width: 100%;
+  background: #fff 
+  url(check.gif)
+  no-repeat
+  center;
+  z-index: 1;
+
+}
     
     
     
   </style>
 </head>
 <body style="background-color:powderblue;" onload="myfunction()">
+	<div id="loading"></div>
   <pdding_for_blog><a href="index.html">this is blog</a></pdding_for_blog>
   <padding_for_box><a href="index.html">home</a></padding_for_box>
   <padding_for_box><a href="about.html">about</a></padding_for_box>
@@ -47,10 +60,11 @@
   <p style="padding-left: 80px;"><font size="4">I am second year undergraduate student at iit kanpur.</font></p>
 
 	
-function displayContent() {
-    loader.style.display='none';
-    document.getElementById('content').style.display='block';
-
-}
+<script type="text/javascript">
+	var load=document.getElementById('loading');
+	function myfunction() {
+    		load.style.display= 'none';
+	}
+</script>
 </body>
 </html>
